@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class DemoMail extends Mailable
+class DemoEmail extends Mailable
 {
     use Queueable, SerializesModels;
     
@@ -17,7 +17,7 @@ class DemoMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($demo)
     {
         $this->demo = $demo;
     }

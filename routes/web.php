@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Profile;
 
 use App\Http\Controllers\UploadFileController; 
+use App\Http\Controllers\MailController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,6 @@ Route::get('/', function () {
 
 
 Route::resource('profiles', 'App\Http\Controllers\ProfileController');
+
+//Email related route
+Route::get('mail/send', [MailController::class, 'send']);
